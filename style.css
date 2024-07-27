@@ -1,0 +1,114 @@
+:root {
+    --background-color: #F1CEA6;
+    --red: #E54E3B;
+    --yellow: #E8C32D;
+    --blue: #025EAC;
+    --calculator-color: #E3DEDA;
+    --pad-color: #CEC0B7;
+    --orange-key-border-color: #E39744;
+    --orange-key-inside-color: #EAB071;
+    --red-key-border-color: #B14F20;
+    --red-key-inside-color: #DB642A;
+    --grey-key-border-color: #8A8194;
+    --grey-key-inside-color: #A49EA9;
+    --operator-key-font-color: #F8EEE4;
+    --white-key-border-color: #E5D7CA;
+    --white-key-inside-color: #F5EFEF;
+    --number-key-font-color: #B14F20;
+    --screen-inside-color: #BFC0A1;
+    --screen-border-color: #18191B;
+    --screen-height: 75%;
+    --strips-height: 25%;
+    --top-height: 32%;
+    --pad-height: 62%;
+    --calculator-height: 92%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+
+
+body {
+    background-color: var(--background-color);
+    height: 100dvh;
+    display: flex;
+
+}
+
+.outside-calculator {
+    height: 90dvh;
+    width: 50dvh;
+    background-color: var(--calculator-color);
+    border-radius: 2%;
+}
+
+.inside-calculator {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    aspect-ratio: 3/4;
+    height: var(--calculator-height);
+    gap: 6%;
+    
+}
+
+.top {
+    height: var(--top-height);
+    width: 100%;
+}
+
+.strips {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 4%;
+    gap: 2%;
+    height: var(--strips-height);
+    
+}
+
+.strip {
+    height: 100%;
+    width: 4%;
+    margin: 0;
+    
+}
+
+.screen {
+    background-color: var(--screen-inside-color);
+    width: 100%;
+    border: solid 8px var(--screen-border-color);
+    height: var(--screen-height);
+    border-radius: 12px;
+    box-shadow: inset 0 8px 10px -2px rgba(0, 0, 0, 0.25);
+       
+}
+
+.keyboard {
+    height: var(--pad-height);
+    background-color: var(--pad-color);
+    margin: 0;
+    border-radius: 12px;
+}
+
+
+
+
+
+.strip.red {
+    background-color: var(--red);
+}
+.strip.yellow {
+    background-color: var(--yellow);
+}
+
+.strip.blue {
+    background-color: var(--blue);
+}
+
+.key {
+    display: inline-block;
+}
